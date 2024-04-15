@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Javascript DOM</title>
+</head>
+<body class="dark-template">
+    <div class="container">
+        <header class="header">
+            <h1 class="main-ttl">Javascript et DOM</h1>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link active" href="/">Entrainement</a></li>
+                    <li><a class="main-nav-link" href="gallery.html">Galerie de photos</a></li>
+                    <li><a class="main-nav-link" href="tabs.html">Navigation par onglets</a></li>
+                    <li><a class="main-nav-link" href="salad.html">Composez votre salade</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- EXERCICE 1 -->
+        <section class="exercice ex1" id="ex1">
+            <h2 class="exercice-ttl">Exercice 1</h2>
+            <p class="exercice-txt">Au clic sur le bouton ci-dessous, masquez le paragraphe de texte à côté de lui s'il est affiché. S'il est masqué, affichez-le.</p>
+            <div class="exercice-sandbox">
+                <button type="button" class="button">Click me</button>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt est temporibus officia consequuntur illum optio quas omnis laudantium assumenda placeat? Laudantium aliquam illum voluptatem minima rem tempore adipisci at quasi?</p>
+            </div>
+        </section>
+
+        <!-- EXERCICE 2 -->
+        <section class="exercice" id="ex2">
+            <h2 class="exercice-ttl">Exercice 2</h2>
+            <p class="exercice-txt">Lorsque l'on fait défiler cette page dans le navigateur, affichez la valeur du défilement vertical en complétant la phrase ci-dessous.</p>
+            <div class="exercice-sandbox">
+                <p>La fenêtre est scrollée de <span id="ex2-scroll-value">0</span> pixels</p>
+            </div>
+        </section>
+
+        <!-- EXERCICE 3 -->
+        <section class="exercice ex3" id="ex3">
+            <h2 class="exercice-ttl">Exercice 3</h2>
+            <p class="exercice-txt">Au clic sur le bouton ci-dessous, faites changer l'ordre des animaux en déplaçant le premier en dernier.</p>
+            <div class="exercice-sandbox">
+                <button type="button" class="button">Click me</button>
+                <ul id="ex3-animals" class="flex-list">
+                    <li>🐅</li>
+                    <li>🐘</li>
+                    <li>🐿️</li>
+                    <li>🦘</li>
+                    <li>🦨</li>
+                    <li>🐒</li>
+                    <li>🐁</li>
+                    <li>🐆</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EXERCICE 4 -->
+        <section class="exercice ex4" id="ex4">
+            <h2 class="exercice-ttl">Exercice 4</h2>
+            <p class="exercice-txt">
+                Au clic sur le bouton ci-dessous, changer sa couleur de fond. <br>
+                La première fois le bouton devient bleu.<br>
+                La deuxième il devient rouge, puis vert.<br>
+                Puis il redevient bleu.
+            </p>
+            <div class="exercice-sandbox">
+                <button type="button" class="button">Click me</button>
+            </div>
+        </section>
+        
+
+        <!-- EXERCICE 5 -->
+        <section class="exercice ex5" id="ex5">
+            <h2 class="exercice-ttl">Exercice 5</h2>
+            <p class="exercice-txt">
+                Changez la couleur de chacun des boutons ci-dessous en lui affectant une couleur totalement aléatoire à chaque fois qu'il est survolé.
+            </p>
+            <div class="exercice-sandbox">
+                <ul class="flex-list">
+                    <li><button type="button" class="button">👽</button></li>
+                    <li><button type="button" class="button">😱</button></li>
+                    <li><button type="button" class="button">🔭</button></li>
+                    <li><button type="button" class="button">🌌</button></li>
+                    <li><button type="button" class="button">🛸</button></li>
+                    <li><button type="button" class="button">🚀</button></li>
+                    <li><button type="button" class="button">🐵</button></li>
+                    <li><button type="button" class="button">👨‍🚀</button></li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <!-- EXERCICE 6 -->
+        <section class="exercice ex6" id="ex6">
+            <h2 class="exercice-ttl">Exercice 6</h2>
+            <p class="exercice-txt">
+                Faites que la phrase ci-desous s'écrive lettre par lettre à raison de 20 lettres par seconde.
+            </p>
+            <div class="exercice-sandbox">
+                <p id="ex6-paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae porro officia eos tenetur voluptate consectetur unde quo veritatis architecto ullam labore ea sit inventore saepe dolorem maxime nam, nisi quod.
+                </p>
+            </div>
+        </section>
+        
+
+        <!-- EXERCICE 7 -->
+        <section class="exercice ex7" id="ex7">
+            <h2 class="exercice-ttl">Exercice 7</h2>
+            <div class="exercice-txt">
+                <p>
+                    On veut créer une to do list.
+                </p>
+                <ol>
+                    <li>A chaque clic sur le bouton ci-dessous, un élément de la liste (array dans le fichier javascript) doit s'afficher dans la page avec une balise li ayant la classe "task-list-task".</li>
+                    <li>Au clic sur une tâche affichée dans la liste, la tâche doit disparaitre et être à nouveau disponible.</li>
+                </ol>
+            </div>
+            <div class="exercice-sandbox grid-2">
+                <div>
+                    <button type="button" id="ex7-button" class="button">Ajouter une tâche à la liste</button>
+                </div>
+                <ul id="ex7-list" class="task-list"></ul>
+            </div>
+        </section>
+        
+
+        <!-- EXERCICE 8 -->
+        <section class="exercice ex8" id="ex8">
+            <h2 class="exercice-ttl">Exercice 8</h2>
+            <div class="exercice-txt">
+                <p>
+                    Chacun des boutons ci-dessous correspond à compteur à zéro (point de vie, force, bouclier).
+                </p>
+                <ol>
+                    <li>Faites qu'au clic sur l'un des bouton, le compteur correspondant augmente de 5 points et ne dépasse pas 100.</li>
+                    <li>A chaque augmentation, faites avancer visuellement la barre de progression correspondante.</li>
+                </ol>
+            </div>
+            <div class="exercice-sandbox">
+                <ul class="flex-col">
+                    <li class="flex-progress">
+                        <button type="button" id="ex8-button-level" class="button" data-progress-id="ex8-level">❤️</button>
+
+                        <!-- Progress bar life -->
+                        <div class="progress">
+                            <div id="ex8-level" class="progress-val progress-val-level"></div>
+                        </div>
+
+                    </li>
+                    <li class="flex-progress">  
+                        <button type="button" id="ex8-button-strength" class="button" data-progress-id="ex8-strength">⚔️</button>
+                        
+                        <!-- Progress bar strength -->
+                        <div class="progress">
+                            <div id="ex8-strength" class="progress-val progress-val-strength"></div>
+                        </div>
+
+                    </li>
+                    <li class="flex-progress">  
+                        <button type="button" id="ex8-button-shield" class="button" data-progress-id="ex8-shield">🛡️</button>
+
+                        <!-- Progress bar shield -->
+                        <div class="progress">
+                            <div id="ex8-shield" class="progress-val progress-val-shield"></div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    <script type="text/javascript" src="js/training.js"></script>
+</body>
+</html>

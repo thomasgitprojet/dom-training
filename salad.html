@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Javascript DOM - Composez votre salade</title>
+</head>
+<body class="dark-template">
+    <div class="container">
+        <header class="header">
+            <h1 class="main-ttl">Javascript et DOM</h1>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" href="/">Entrainement</a></li>
+                    <li><a class="main-nav-link" href="gallery.html">Galerie de photos</a></li>
+                    <li><a class="main-nav-link" href="tabs.html">Navigation par onglets</a></li>
+                    <li><a class="main-nav-link active" href="salad.html">Composez votre salade</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="exercice salad" id="salad">
+            <h2 class="exercice-ttl">Composez votre Salade</h2>
+            <div class="exercice-txt">
+                Créez un script de création de salade.
+                <ol>
+                    <li>Affichez les ingrédients présent dans l'array (fichier js) dans le ul des ingrédients disponibles. (utilisez des balises li et des balises button avec la classe .button)</li>
+                    <li>Faites qu'au clic sur un ingrédient il s'ajoute au ul de la salade créée.</li>
+                    <li>Mettez à jour la phrase "Il y a 0 ingrédient(s)." à chaque ajout.</li>
+                    <li>Faites qu'au clic sur un ingrédient dans la salade, il soit retiré de la salade et retourne dans les ingrédients disponibles.</li>
+                    <li>Limitez le nombre d'ingrédients dans la salade à 5.</li>
+                </ol>
+            </div>
+            <div class="exercice-sandbox">
+                <div class="ingredients">
+                    <h3>Ingrédients disponibles</h3>
+                    <ul id="salad-ingredients" class="flex-list"></ul>
+                </div>
+                <div class="salad">
+                    <h3>Votre salade</h3>
+                    <div>Il y a <span id="salad-count">0</span> ingrédient(s).</div>
+                    <ul id="salad-final" class="flex-list"></ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script type="text/javascript" src="js/salad.js"></script>
+</body>
+</html>

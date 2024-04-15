@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Javascript DOM - Navigation par onglets</title>
+</head>
+<body class="dark-template">
+    <div class="container">
+        <header class="header">
+            <h1 class="main-ttl">Javascript et DOM</h1>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" href="/">Entrainement</a></li>
+                    <li><a class="main-nav-link" href="gallery.html">Galerie de photos</a></li>
+                    <li><a class="main-nav-link active" href="tabs.html">Navigation par onglets</a></li>
+                    <li><a class="main-nav-link" href="salad.html">Composez votre salade</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="exercice tabs" id="tabs">
+            <h2 class="exercice-ttl">Navigation par onglets</h2>
+            <div class="exercice-txt">
+                Nous souhaitons créer un système d'onglets dans notre page.
+                Chaque lien dans la balise nav ci-dessous correspond à une balise article un peu plus bas.
+                L'objectif final est qu'au clic sur un onglet, on affiche le contenu correspondant en dessous et uniquement celui-ci.
+                <ol>
+                    <li>Ajoutez du CSS pour que le lien onglet portant la classe "active" ai un fond blanc.</li>
+                    <li>Faites qu'au clic sur un lien onglet il porte la classe "active" et seulement lui.</li>
+                    <li>Ajoutez du CSS afin que seule la balise article portant la classe "active" s'affiche.</li>
+                    <li>Faites qu'au clic sur un lien onglet, seule la balise article correspondante s'affiche.</li>
+                </ol>
+            </div>
+            <div class="exercice-sandbox">
+                <nav class="tabs">
+                    <ul id="tabs-links" class="tabs-list">
+                        <li class="tabs-item">
+                            <a class="tabs-link active" href="#histoiry" data-tab="tabs-tab1">Notre histoire</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link" href="#values" data-tab="tabs-tab2">Nos valeurs</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link" href="#services" data-tab="tabs-tab3">Nos services</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link" href="#contact" data-tab="tabs-tab4">Nous contacter</a>
+                        </li>
+                    </ul>
+                </nav>
+                <section id="tabs-contents" class="tab-content">
+                    <article id="tabs-tab1" data-tab-content="" class="tab-content-item active">
+                        <h3>Notre histoire</h3>
+                        <p>
+                            Créée en 1958 sur le Port de Saint-Nazaire, l’entreprise de sécurité est au départ une affaire familiale. Son activité se limite alors à la surveillance de quelques sites dans la région de Saint-Nazaire. Très vite, portée par son développement, l’entreprise devient SA en 1973 et ouvre une première agence à Brest en 1974.
+                        </p>
+                        <p>
+                            En 1975, le contexte économique lié à la crise pétrolière plonge l’entreprise dans des difficultés telles qu’un changement d’organisation s’impose. Guy TEMPEREAU, alors âgé de 23 ans, initié aux arcanes de la profession depuis six ans, parie sur l’avenir en reprenant l’entreprise en 1976. Il obtient en quelques mois les premiers résultats et parvient à sauver l’entreprise qu’il propulsera 30 ans plus tard aux premiers rangs de la profession.
+                        </p>
+                    </article>
+                    <article id="tabs-tab2" data-tab-content="" class="tab-content-item">
+                        <h3>Nos Valeurs</h3>
+                        <h4>Créativité</h4>
+                        <p>
+                            Dans un monde en mouvement perpétuel, nous sommes déterminés à nous dépasser pour trouver, à chaque fois, la bonne solution en combinant intelligemment talent, data et technologie. Déterminés à aller plus loin que ce qu’attendent nos clients afin de répondre aux besoins de simplicité, de fluidité et de relations plus humaines exprimés par les consommateurs.
+                        </p>
+                        <h4>Excellence</h4>
+                        <p>
+                            Nous aspirons toujours au meilleur. Nous sommes conscients que cela revient à vouloir atteindre des objectifs dans un environnement où la transformation digitale déplace perpétuellement les lignes. Cela exige de s’engager pleinement, de se surpasser. Pour y arriver, l’engagement de nos équipes est total. L’excellence est notre marque de fabrique.
+                        </p>
+                        <h4>Respect</h4>
+                        <p>
+                            Le respect mutuel et la confiance sont le fondement de toute entreprise prospère. Et Majorel confirme la règle. Nous sommes convaincus que l’intelligence collective, le travail d’équipe, avec nos collaborateurs mais également avec nos clients, est un puissant levier pour relever les défis et réaliser nos ambitions.
+                        </p>
+                    </article>
+                    <article id="tabs-tab3" data-tab-content="" class="tab-content-item">
+                        <h3>Nos Services</h3>
+                        <h4>Évaluations et certification</h4>
+                        <p>
+                            La certification BSI montre au monde que vous travaillez de la manière la plus intelligente et la plus efficace et que vous améliorez continuellement vos performances.
+                        </p>
+                        <h4>Audit et vérification</h4>
+                        <p>
+                            Audits fournisseurs, audits personnalisés et audits internes.
+                        </p>
+                        <h4>Accéder et acheter des normes</h4>
+                        <p>
+                            Consultez notre catalogue de normes pour trouver la norme dont vous avez besoin.
+                        </p>
+                        <h4>Formation</h4>
+                        <p>
+                            BSI a été à l'origine de nombreuses normes de premier plan reconnues dans le monde entier, et nos formateurs expérimentés feront de vous un expert sur la façon de les intégrer afin que votre entreprise fonctionne du mieux possible.
+                        </p>
+                    </article>
+                    <article id="tabs-tab4" data-tab-content="" class="tab-content-item">
+                        <h3>Nous contacter</h3>
+                        <p>
+                            Voici nos coordonnées 
+                        </p>
+                        <ul class="contact-list">
+                            <li>Téléphone : 01 02 03 04 05</li>
+                            <li>E-mail : contacteznous@cheznous.fr</li>
+                            <li>Adresse : Dans la rue au fond à gauche, 75099 QUELQUEPART</li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+    </div>
+    <script type="text/javascript" src="js/tabs.js"></script>
+</body>
+</html>
