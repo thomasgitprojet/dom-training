@@ -70,11 +70,8 @@ for(let btn of document.querySelectorAll("#ex5 button")) {
 // const text = document.querySelector("#ex6 .exercice-txt");
 // console.log(text);
 const text = document.querySelector("#ex6-paragraph").innerHTML.trim();
-console.log(text);
 const letters = text.split("");
-console.log(letters);
 document.querySelector("#ex6-paragraph").innerHTML = "";
-
 
 letters.forEach((letter, i) => {
     setTimeout(() => document.querySelector("#ex6-paragraph").innerHTML += letter, i * 50)
@@ -94,6 +91,52 @@ const taskList = [
     "🧹 Passer l'aspirateur",
     "🌳 Tondre la pelouse"
 ];
+
+const btnAddTask = document.querySelector("#ex7-button");
+// const Task = document.querySelector("#ex7-list")
+// console.log(Task);
+// console.log(btnAddTask);
+// const newLi = document.createElement("li");
+// newLi.innerHTML = taskList.shift()
+// newLi.setAttribute("class", "task-list-task")
+// console.log(newLi);
+// Task.appendChild(newLi);
+// console.log(Task);
+
+/**
+ * creat and add element at element of dom
+ * @param {array} array array of news tasks
+ * @param {Element} lstElement element of list of news tasks
+ */
+function addTaskLst (array, lstElement) {
+    const newLi = document.createElement("li"); 
+    newLi.innerHTML = array.shift();
+    newLi.setAttribute("class", "task-list-task");
+    lstElement.appendChild(newLi);
+}
+
+/**
+ * add element of dom on click
+ * @returns 
+ */
+function addNextTask () {
+    if (taskList.length < 1) {
+        btnAddTask.removeEventListener("click", addNextTask);
+        return;
+    }
+
+    addTaskLst(taskList, document.querySelector("#ex7-list"))
+}
+
+btnAddTask.addEventListener("click", addNextTask)
+
+// btnAddTask.addEventListener("click", function (e) {
+//     // Task.innerHTML += taskList.shift();
+//     addTaskLst(taskList, document.querySelector("#ex7-list"));
+//     if(taskList.length < 1 ) {
+//         btnAddTask.removeEventListener("click")
+//     }
+// })
 
 
 /* ------------------------------------ */
