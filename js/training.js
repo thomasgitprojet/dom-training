@@ -93,15 +93,6 @@ const taskList = [
 ];
 
 const btnAddTask = document.querySelector("#ex7-button");
-// const Task = document.querySelector("#ex7-list")
-// console.log(Task);
-// console.log(btnAddTask);
-// const newLi = document.createElement("li");
-// newLi.innerHTML = taskList.shift()
-// newLi.setAttribute("class", "task-list-task")
-// console.log(newLi);
-// Task.appendChild(newLi);
-// console.log(Task);
 
 /**
  * creat and add element at element of dom
@@ -116,7 +107,7 @@ function addTaskLst (array, lstElement) {
 }
 
 /**
- * add element of dom on click
+ * add element in the dom on click
  * @returns 
  */
 function addNextTask () {
@@ -130,14 +121,40 @@ function addNextTask () {
 
 btnAddTask.addEventListener("click", addNextTask)
 
-// btnAddTask.addEventListener("click", function (e) {
-//     // Task.innerHTML += taskList.shift();
-//     addTaskLst(taskList, document.querySelector("#ex7-list"));
-//     if(taskList.length < 1 ) {
-//         btnAddTask.removeEventListener("click")
-//     }
-// })
-
 
 /* ------------------------------------ */
 /* --- Exercice 8 --- */
+
+ const level = document.querySelector("#ex8-button-level");
+// const strength = document.querySelector("#ex8-button-strength");
+// const shield = document.querySelector("#ex8-button-shield");
+// console.log(level, strength, shield);
+
+const levelProgress = document.querySelector("#ex8-level");
+// console.log(levelProgress);
+
+let widthStyle = 0;
+
+function pexXp (element) {
+    element.style.width = widthStyle + "%";
+}
+
+function addXpInProgress (element, btn) {
+    if (element.style.width === 100 + "%") {
+        btn.removeEventListener("click", addXpInProgress);
+        return;
+    }
+    widthStyle += 5;
+    pexXp(element);
+}
+
+level.addEventListener("click", addXpInProgress(levelProgress, level));
+// console.log(addXpInProgress());
+
+console.log(levelProgress.style.width);
+
+// level.addEventListener("click", function(e) {
+//     levelProgress.style.width = `${width}%`;
+//     width += 5;
+//     console.log(width);
+// })
