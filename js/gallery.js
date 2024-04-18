@@ -1,4 +1,5 @@
 const imgs = document.querySelectorAll(".thumbs-img");
+console.log(imgs);
 const bigImg = document.querySelector("#gallery-picture");
 const titleText = document.querySelector("#gallery-title");
 const descriptionImg = document.querySelector("#gallery-description");

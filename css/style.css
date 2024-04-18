@@ -13,3 +13,8 @@
 .green {
     background-color: green;
 }
+
+.active {
+    background-color: #ffffff;
+    border-radius: 16px 16px 0 0;
+}
