@@ -1,7 +1,11 @@
 const links = document.querySelectorAll(".tabs-link");
 const articles = document.querySelectorAll("[data-tab-content]")
 
-function addClassActive(element) {
+/**
+ * add class active and remove class hidden
+ * @param {element} element link of nav with class "tabs"
+ */
+function addClassActiveAndRemoveHidden(element) {
     element.classList.toggle("active")
     console.log(element.dataset.tab);
     let selector = element.dataset.tab;
@@ -10,6 +14,11 @@ function addClassActive(element) {
     hiddenArticle(showArticle)
 }
 
+/**
+ * supp class active 
+ * @param {array} array array links of of nav with class "tabs"
+ * @param {element} element link of nav with class "tabs"
+ */
 function removeClassActive(array, element) {
     for (data of array) {
         if (!(data.dataset.tab === element.dataset.tab)) {
@@ -18,6 +27,10 @@ function removeClassActive(array, element) {
     }
 }
 
+/**
+ * add class hidden
+ * @param {element} showArticle article with the class hidden = false
+ */
 function hiddenArticle(showArticle) {
     for (let hidden of articles) {
         if (!(showArticle.classList === hidden.classList)) {
@@ -28,7 +41,7 @@ function hiddenArticle(showArticle) {
 
 for (let onglet of links) {
     onglet.addEventListener("click", function (e) {
-        addClassActive(onglet)
+        addClassActiveAndHidden(onglet)
         removeClassActive(links, onglet)
     })
 }
