@@ -41,7 +41,7 @@ function hiddenArticle(showArticle) {
 
 for (let onglet of links) {
     onglet.addEventListener("click", function (e) {
-        addClassActiveAndHidden(onglet)
+        addClassActiveAndRemoveHidden(onglet)
         removeClassActive(links, onglet)
     })
 }
